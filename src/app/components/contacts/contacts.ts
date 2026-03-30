@@ -2,6 +2,7 @@ import { CommonModule} from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import {environment} from '../../environments/enronment.mail'
 
 @Component({
   selector: 'app-contacts',
@@ -23,7 +24,7 @@ export class Contacts {
 
   constructor() {
     // Replace with your EmailJS credentials
-    emailjs.init('YOUR_PUBLIC_KEY'); // ← Get from emailjs.com
+    emailjs.init(environment.emailJsPublicKey); // ← Get from emailjs.com
   }
 
   async sendEmail(form: any) {
@@ -43,8 +44,8 @@ export class Contacts {
 
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID', // ← from EmailJS dashboard
-        'YOUR_TEMPLATE_ID', // ← create a template in EmailJS
+        environment.emailJsServiceId, // ← from EmailJS dashboard
+        environment.emailJsTemplateId, // ← create a template in EmailJS
         templateParams,
       );
 
