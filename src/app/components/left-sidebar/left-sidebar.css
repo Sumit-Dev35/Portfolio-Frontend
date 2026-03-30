@@ -1,0 +1,65 @@
+.sidebar {
+  position: fixed;
+  top: 40px;
+  left: 25px;
+  bottom: 40px;
+  max-height: 580px;
+  overflow: hidden;
+  z-index: 1050;
+  width: 250px;
+}
+
+.nav-wrapper {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: fill;
+  background-position: right;
+  border: 3px solid #222831;
+}
+
+.link-text {
+  color: #222831;
+  font-weight: 600;
+  transition: all 0.3 ease-in;
+}
+
+.profile-name {
+  color: #222831;
+  font-weight: 700;
+  font-family: 'Jost', sans-serif;
+}
+
+.job-profile {
+  color: #222831;
+  font-weight: 500;
+  font-family: 'Jost', sans-serif;
+  text-decoration: underline;
+}
+
+.nav-item {
+  transition: all 0.3s ease-in;
+}
+
+.nav-item:hover {
+  transform: translateX(8px);
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+.nav-link.active i,
+.nav-link.active .link-text {
+  font-weight: 900;
+  color: #ee2c3c;
+}
