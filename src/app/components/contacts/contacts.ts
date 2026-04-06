@@ -1,12 +1,12 @@
-import { CommonModule} from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
-import {environment} from '../../environments/enronment.mail'
+import { environment } from '../../environments/environment.mail';
 
 @Component({
   selector: 'app-contacts',
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contacts.html',
   styleUrl: './contacts.css',
 })
@@ -23,8 +23,7 @@ export class Contacts {
   errorMessage = '';
 
   constructor() {
-    // Replace with your EmailJS credentials
-    emailjs.init(environment.emailJsPublicKey); // ← Get from emailjs.com
+    emailjs.init(environment.emailJsPublicKey);
   }
 
   async sendEmail(form: any) {
@@ -44,8 +43,8 @@ export class Contacts {
 
     try {
       await emailjs.send(
-        environment.emailJsServiceId, // ← from EmailJS dashboard
-        environment.emailJsTemplateId, // ← create a template in EmailJS
+        environment.emailJsServiceId,
+        environment.emailJsTemplateId,
         templateParams,
       );
 
