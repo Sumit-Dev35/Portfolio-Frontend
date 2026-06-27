@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg portfolio-navbar fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-3" routerLink="/home">
+      <div class="logo-circle">
+        {{ navbarConfig.initials }}
+      </div>
+      <div class="brand-details">
+        <div class="brand-name">
+          {{ navbarConfig.name }}
+        </div>
+        <div class="brand-role">
+          {{ navbarConfig.role }}
+        </div>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="portfolioNavbar">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        @for(item of navbarConfig.menuItems; track item.route) {
+        <li class="nav-item">
+          <a [routerLink]="item.route" routerLinkActive="active-link" [routerLinkActiveOptions]="{
+              exact: item.exact ?? false
+            }" class="nav-link">
+            <i class="bi" [ngClass]="item.icon"></i>
+            {{ item.label }}
+          </a>
+        </li>
+        }
+        <li class="nav-item ms-lg-2">
+          <a [href]="navbarConfig.resumeUrl" target="_blank" class="btn btn-primary resume-btn">
+            Resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

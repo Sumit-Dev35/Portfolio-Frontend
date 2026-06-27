@@ -1,13 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { LeftSidebar } from './components/left-sidebar/left-sidebar';
-import { Layout } from "./components/layout/layout";
+import { Layout } from './components/layout/layout';
+import { Navbar } from './components/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [LeftSidebar, Layout],
+  imports: [Layout, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('sumit-portfolio-frontend');
+  protected readonly title = signal('Sumit Tiwari | Full Stack Developer');
 }

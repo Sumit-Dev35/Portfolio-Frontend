@@ -8,13 +8,13 @@ import { Home } from './components/home/home';
 
 export const routes: Routes = [
   {
-    path:'',
-    redirectTo:'home',
-    pathMatch:'full',
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
   {
-    path:'home',
-    component:Home,
+    path: 'home',
+    component: Home,
   },
   {
     path: 'about',
@@ -33,7 +33,7 @@ export const routes: Routes = [
     component: Skills,
   },
   {
-    path:'contact',
-    component:Contacts
+    path: 'contact',
+    component: Contacts,
   },
 ];

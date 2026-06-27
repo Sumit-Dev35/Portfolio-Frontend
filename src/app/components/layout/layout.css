@@ -1,5 +1,24 @@
-.main-template{
-  margin-left: 320px;
+.main-template {
   min-height: 100vh;
-  padding: 45px;
+  /* padding-top: 110px; */
+  padding-bottom: 40px;
+  background: #f8fafc;
+}
+
+.content-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 768px) {
+  .main-template {
+    padding-top: 95px;
+  }
+
+  .content-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
