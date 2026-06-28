@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { PROJECTS_DATA, UPCOMING_PROJECTS } from './projects.data';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
   templateUrl: './projects.html',
-  styleUrl: './projects.css',
+  styleUrl: './projects.css'
 })
 export class Projects {
-
+  readonly projects = PROJECTS_DATA;
+  readonly upcomingProjects = UPCOMING_PROJECTS;
 }
