@@ -1,3 +1,296 @@
-.main-container{
-  min-height: 86vh;
+.about-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  font-weight: 600;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.hero-headline {
+  margin-top: 25px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  background: linear-gradient(135deg, #2563eb, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-name {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  max-width: 800px;
+  margin: 20px auto 0;
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.facts-section,
+.content-section,
+.expertise-section,
+.skills-section,
+.metrics-section,
+.timeline-section,
+.highlights-section,
+.interests-section,
+.cta-section {
+  margin-top: 60px;
+}
+
+.fact-card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+  height: 100%;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.fact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.fact-card i {
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.fact-card h5 {
+  margin-top: 16px;
+  font-weight: 700;
+}
+
+.fact-card p {
+  margin: 0;
+  color: #64748b;
+}
+
+.content-card {
+  background: white;
+  border-radius: 28px;
+  padding: 45px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+}
+
+.content-card p {
+  color: #475569;
+  line-height: 1.9;
+}
+
+.content-card .lead {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.expertise-card {
+  height: 100%;
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.expertise-card i {
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.expertise-card h5 {
+  margin-top: 18px;
+  font-weight: 700;
+}
+
+.expertise-card p {
+  margin-top: 12px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.skill-pill {
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.skill-pill:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.metric-card {
+  text-align: center;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border-radius: 24px;
+  padding: 35px 20px;
+}
+
+.metric-card h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.metric-card p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.timeline-year {
+  min-width: 140px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.timeline-content {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  border-radius: 18px;
+  flex: 1;
+}
+
+.timeline-content h5 {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #64748b;
+}
+
+.highlight-card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+  height: 100%;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card i {
+  font-size: 2rem;
+  color: #f59e0b;
+}
+
+.highlight-card h5 {
+  margin-top: 16px;
+  font-weight: 700;
+}
+
+.highlight-card p {
+  color: #64748b;
+}
+
+.cta-section {
+  padding: 80px 0;
+}
+
+.cta-section h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+.cta-section p {
+  color: #64748b;
+  max-width: 700px;
+  margin: 20px auto 35px;
+}
+
+.cta-section .btn {
+  padding: 14px 36px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .hero-headline {
+    font-size: 2.6rem;
+  }
+
+  .hero-name {
+    font-size: 1.7rem;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-year {
+    min-width: auto;
+  }
+
+  .content-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 2.1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .about-page {
+    padding: 10px;
+  }
 }
