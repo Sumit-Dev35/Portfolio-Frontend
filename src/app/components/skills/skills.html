@@ -1,39 +1,97 @@
-<div class="shadow-lg rounded-4 py-4 px-4">
-    <h2 class="fw-bold mb-4">Technical Skills</h2>
-    <div class="row g-3">
-      <!-- Languages -->
-      <div class="col-12">
-        <h6 class="text-uppercase text-muted mb-3">Languages</h6>
-        <div class="d-flex flex-wrap gap-2">
-          <span class="badge bg-dark fs-6 px-4 py-2 rounded-pill">C++</span>
-          <span class="badge bg-dark fs-6 px-4 py-2 rounded-pill">Java</span>
-          <span class="badge bg-dark fs-6 px-4 py-2 rounded-pill">JavaScript</span>
-          <span class="badge bg-dark fs-6 px-4 py-2 rounded-pill">TypeScript</span>
-          <span class="badge bg-dark fs-6 px-4 py-2 rounded-pill">SQL</span>
+<div class="skills-page">
+  <section class="hero-section">
+    <span class="hero-badge">
+      {{ skillsData.badge }}
+    </span>
+    <h1 class="hero-title">
+      {{ skillsData.title }}
+    </h1>
+    <p class="hero-subtitle">
+      {{ skillsData.subtitle }}
+    </p>
+  </section>
+  <section class="stats-section">
+    <div class="row g-4">
+      @for(stat of skillsData.stats; track stat.label){
+      <div class="col-md-3">
+        <div class="stat-card">
+          <h2>{{ stat.value }}</h2>
+          <p>{{ stat.label }}</p>
         </div>
       </div>
-      <div class="col-12">
-        <h6 class="text-uppercase text-muted mb-3">Technologies & Frameworks</h6>
-        <div class="d-flex flex-wrap gap-2">
-          <span class="badge bg-primary fs-6 px-4 py-2 rounded-pill">Angular</span>
-          <span class="badge bg-primary fs-6 px-4 py-2 rounded-pill">React.js</span>
-          <span class="badge bg-primary fs-6 px-4 py-2 rounded-pill">Spring Boot</span>
-          <span class="badge bg-primary fs-6 px-4 py-2 rounded-pill">Node.js</span>
-          <span class="badge bg-primary fs-6 px-4 py-2 rounded-pill">Express.js</span>
-          <span class="badge bg-primary fs-6 px-4 py-2 rounded-pill">MongoDB</span>
-          <span class="badge bg-primary fs-6 px-4 py-2 rounded-pill">Bootstrap</span>
-          <span class="badge bg-primary fs-6 px-4 py-2 rounded-pill">Angular Material</span>
-          <span class="badge bg-primary fs-6 px-4 py-2 rounded-pill">GitHub</span>
-        </div>
-      </div>
-      <div class="col-12">
-        <h6 class="text-uppercase text-muted mb-3">Core Fundamentals</h6>
-        <div class="d-flex flex-wrap gap-2">
-          <span class="badge bg-secondary fs-6 px-4 py-2 rounded-pill">Data Structures & Algorithms</span>
-          <span class="badge bg-secondary fs-6 px-4 py-2 rounded-pill">Object-Oriented Programming</span>
-          <span class="badge bg-secondary fs-6 px-4 py-2 rounded-pill">Database Management System</span>
-          <span class="badge bg-secondary fs-6 px-4 py-2 rounded-pill">Operating System</span>
-        </div>
-      </div>
+      }
     </div>
+  </section>
+  <section class="categories-section">
+    <h2 class="section-title">
+      Technical Skills
+    </h2>
+    <div class="row g-4">
+      @for(category of skillsData.categories; track category.title){
+      <div class="col-lg-6">
+        <div class="category-card">
+          <div class="card-header">
+            <i class="bi {{ category.icon }}"></i>
+            <h5>{{ category.title }}</h5>
+          </div>
+          <div class="skills-wrapper">
+            @for(skill of category.skills; track skill){
+            <span class="skill-pill">
+              {{ skill }}
+            </span>
+            }
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+  <section class="expertise-section">
+    <h2 class="section-title">
+      Areas of Expertise
+    </h2>
+    <div class="row g-4">
+      @for(item of skillsData.expertise; track item.title){
+      <div class="col-md-6">
+        <div class="expertise-card">
+          <i class="bi {{ item.icon }}"></i>
+          <h5>{{ item.title }}</h5>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+  <section class="platform-section">
+    <h2 class="section-title">
+      Competitive Programming
+    </h2>
+    <div class="row g-4">
+      @for(platform of skillsData.platforms; track platform.title){
+      <div class="col-md-4">
+        <div class="platform-card">
+          <i class="bi {{ platform.icon }}"></i>
+          <h5>{{ platform.title }}</h5>
+          <p>{{ platform.value }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+  <section class="certification-section">
+    <h2 class="section-title">
+      Certifications
+    </h2>
+    <div class="row g-4">
+      @for(cert of skillsData.certifications; track cert.title){
+      <div class="col-md-4">
+        <div class="cert-card">
+          <i class="bi {{ cert.icon }}"></i>
+          <h5>{{ cert.title }}</h5>
+          <p>{{ cert.provider }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
 </div>

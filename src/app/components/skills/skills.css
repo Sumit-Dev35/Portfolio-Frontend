@@ -1,3 +1,111 @@
-.main-container{
-  min-height: 86vh;
+.skills-page {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.hero-badge {
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.hero-title {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  max-width: 750px;
+  margin: 20px auto;
+  color: #64748b;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.stats-section,
+.categories-section,
+.expertise-section,
+.platform-section,
+.certification-section {
+  margin-top: 70px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.category-card,
+.expertise-card,
+.platform-card,
+.cert-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.category-card:hover,
+.expertise-card:hover,
+.platform-card:hover,
+.cert-card:hover {
+  transform: translateY(-6px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card-header i,
+.expertise-card i,
+.platform-card i,
+.cert-card i {
+  color: #2563eb;
+  font-size: 1.5rem;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-pill {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.platform-card,
+.cert-card {
+  text-align: center;
+}
+
+.platform-card i,
+.cert-card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
 }
