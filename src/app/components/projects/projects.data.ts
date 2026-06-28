@@ -56,7 +56,7 @@ export const PROJECTS_DATA: Project[] = [
     description:
       'Ongoing backend learning project focused on API design, authentication, database integration and enterprise architecture.',
 
-    image: 'assets/projects/backend-lab.png',
+    image: 'images/backend_engineering_lab_image.png',
 
     technologies: ['Java', 'Spring Boot', 'MySQL', 'JWT', 'Maven'],
 
@@ -77,7 +77,7 @@ export const PROJECTS_DATA: Project[] = [
     description:
       'Hands-on exploration of cloud deployment, containerization, CI/CD pipelines and scalable infrastructure practices.',
 
-    image: 'assets/projects/cloud-learning.png',
+    image: 'images/cloud_learning_image.png',
 
     technologies: ['AWS', 'Docker', 'Linux', 'GitHub Actions'],
 
