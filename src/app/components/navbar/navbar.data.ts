@@ -4,7 +4,7 @@ export const NAVBAR_CONFIG: NavbarConfig = {
   name: 'Sumit Tiwari',
   role: 'Full Stack Developer',
   initials: 'ST',
-  resumeUrl: '/assets/Sumit_Tiwari_Resume.pdf',
+  resumeUrl: '/Sumit_Tiwari_Software_Dev_Resume _Updated.pdf',
 
   menuItems: [
     {

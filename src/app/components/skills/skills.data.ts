@@ -101,11 +101,11 @@ export const SKILLS_DATA: SkillsData = {
   ],
   stats: [
     {
-      value: '1.5+',
+      value: '2+',
       label: 'Years Experience',
     },
     {
-      value: '800+',
+      value: '2000+',
       label: 'Problems Solved',
     },
     {

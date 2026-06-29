@@ -15,8 +15,8 @@ export const PROJECTS_DATA: Project[] = [
       'Responsive Design',
       'Clean Architecture',
     ],
-    githubUrl: '#',
-    liveUrl: '#',
+    githubUrl: 'https://github.com/Sumit-Dev35/Portfolio-Frontend',
+    liveUrl: 'https://sumit-portfolio-wheat.vercel.app',
     type: 'Personal',
   },
   {
@@ -55,8 +55,8 @@ export const PROJECTS_DATA: Project[] = [
 
     highlights: ['REST APIs', 'Authentication', 'Database Design', 'Exception Handling'],
 
-    githubUrl: '#',
-    liveUrl: '#',
+    githubUrl: '',
+    liveUrl: '',
 
     type: 'Learning',
   },
@@ -76,8 +76,8 @@ export const PROJECTS_DATA: Project[] = [
 
     highlights: ['Containerization', 'Cloud Concepts', 'CI/CD', 'Deployment'],
 
-    githubUrl: '#',
-    liveUrl: '#',
+    githubUrl: '',
+    liveUrl: '',
 
     type: 'Learning',
   },

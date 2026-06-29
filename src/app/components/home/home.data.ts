@@ -101,7 +101,7 @@ export const HERO_DATA: HeroData = {
     {
       icon: 'bi-envelope-fill',
       label: 'Email',
-      url: 'mailto:sumittiwari0305@gmail.com',
+      url: 'mailto:amit.dev.0305@gmail.com',
     },
   ],
 

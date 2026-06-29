@@ -16,7 +16,7 @@ export const ABOUT_DATA: AboutData = {
   previousRole:
     'Previously at upGrad, I built interactive Angular applications, integrated CleverTap analytics and contributed to large-scale educational platforms.',
   competitiveProgramming:
-    'I am a LeetCode Guardian (2264), CodeChef 4-Star (1895) and Codeforces Specialist (1477), with 800+ solved problems and multiple global rankings.',
+    'I am a LeetCode Guardian (2264), CodeChef 4-Star (1895) and Codeforces Specialist (1477), with 2000+ solved problems and multiple global rankings.',
   quickFacts: [
     {
       icon: 'bi-briefcase-fill',
