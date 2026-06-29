@@ -5,27 +5,20 @@ export const PROJECTS_DATA: Project[] = [
     id: 1,
     title: 'Developer Portfolio',
     subtitle: 'Angular • TypeScript • Bootstrap',
-
     description:
       'Modern portfolio website built using reusable Angular architecture, model-driven rendering and responsive UI design.',
-
     image: 'images/sumit_portfolio_image.png',
-
     technologies: ['Angular', 'TypeScript', 'Bootstrap', 'RxJS', 'Angular Router'],
-
     highlights: [
       'Reusable Components',
       'Data Driven Rendering',
       'Responsive Design',
       'Clean Architecture',
     ],
-
     githubUrl: '#',
     liveUrl: '#',
-
     type: 'Personal',
   },
-
   {
     id: 2,
     title: 'Room Reservation System',
@@ -41,8 +34,8 @@ export const PROJECTS_DATA: Project[] = [
 
     highlights: ['Booking Workflow', 'Search & Filters', 'Responsive UI', 'Cart Management'],
 
-    githubUrl: '#',
-    liveUrl: '#',
+    githubUrl: 'https://github.com/SUMIT-TI/roombooking',
+    liveUrl: 'https://sumit-ti.github.io/roombooking/',
 
     type: 'Personal',
   },

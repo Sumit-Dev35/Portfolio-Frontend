@@ -10,7 +10,7 @@ export const ABOUT_DATA: AboutData = {
   introduction:
     'B.Tech Electrical Engineering graduate from NIT Patna (CGPA 7.92/10) who transitioned into software engineering through a passion for problem solving and technology.',
   journey:
-    'With 1.5+ years of professional experience, I specialize in building modern web applications using Angular, Spring Boot, Node.js, Java and MongoDB.',
+    'With 2+ years of professional experience, I specialize in building modern web applications using Angular, Spring Boot, Node.js, Java and MongoDB.',
   currentRole:
     'At TCS Digitate, I develop enterprise-grade developer productivity tools, including Monaco Editor integrations, workflow export systems, auto-compilation engines and scalable backend services.',
   previousRole:
