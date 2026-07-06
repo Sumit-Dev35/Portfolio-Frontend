@@ -1,61 +1,97 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import emailjs from '@emailjs/browser';
-import { environment } from '../../environments/environment.mail';
+import { FormsModule, NgForm } from '@angular/forms';
+
+import { CONTACT_DATA } from './contacts.data';
+import { ContactService } from './contacts.service';
 
 @Component({
-  selector: 'app-contacts',
-  imports: [CommonModule, FormsModule],
+  selector: 'app-contact',
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule
+  ],
   templateUrl: './contacts.html',
-  styleUrl: './contacts.css',
+  styleUrl: './contacts.css'
 })
 export class Contacts {
+
+  readonly data = CONTACT_DATA;
+
   formData = {
     name: '',
     email: '',
     subject: '',
-    message: '',
+    message: ''
   };
 
   isSubmitting = false;
+
   successMessage = '';
+
   errorMessage = '';
 
-  constructor() {
-    emailjs.init(environment.emailJsPublicKey);
-  }
+  constructor(
+    private readonly contactService: ContactService
+  ) {}
 
-  async sendEmail(form: any) {
-    if (form.invalid) return;
+  async sendEmail(form: NgForm): Promise<void> {
+
+    if (form.invalid) {
+
+      form.control.markAllAsTouched();
+
+      return;
+
+    }
 
     this.isSubmitting = true;
+
     this.successMessage = '';
+
     this.errorMessage = '';
 
-    const templateParams = {
-      from_name: this.formData.name,
-      from_email: this.formData.email,
-      subject: this.formData.subject,
-      message: this.formData.message,
-      to_name: 'Sumit Tiwari',
+    try {
+
+      await this.contactService.sendEmail(this.formData);
+
+      this.successMessage =
+        "Thank you for reaching out! Your message has been sent successfully. I'll get back to you within 24 hours.";
+
+      form.resetForm();
+
+      this.resetFormData();
+
+    } catch (error) {
+
+      console.error('EmailJS Error:', error);
+
+      this.errorMessage =
+        'Something went wrong while sending your message. Please try again later or contact me directly via email.';
+
+    } finally {
+
+      this.isSubmitting = false;
+
+    }
+
+  }
+
+  private resetFormData(): void {
+
+    this.formData = {
+
+      name: '',
+
+      email: '',
+
+      subject: '',
+
+      message: ''
+
     };
 
-    try {
-      await emailjs.send(
-        environment.emailJsServiceId,
-        environment.emailJsTemplateId,
-        templateParams,
-      );
-
-      this.successMessage = 'Thank you! Your message has been sent successfully.';
-      form.resetForm();
-      this.formData = { name: '', email: '', subject: '', message: '' };
-    } catch (error) {
-      console.error('EmailJS error:', error);
-      this.errorMessage = 'Oops! Something went wrong. Please try again or email me directly.';
-    } finally {
-      this.isSubmitting = false;
-    }
   }
+
 }
