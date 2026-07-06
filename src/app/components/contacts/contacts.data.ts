@@ -46,35 +46,35 @@ export const CONTACT_DATA: ContactPageData = {
     {
       icon: 'bi-github',
       label: 'GitHub',
-      url: 'https://github.com/sumit',
+      url: 'https://github.com/Sumit-Dev35',
       buttonClass: 'btn-outline-dark'
     },
 
     {
       icon: 'bi-code-square',
       label: 'LeetCode',
-      url: 'https://leetcode.com/u/yourusername/',
+      url: 'https://leetcode.com/u/Bitwise_Operator/',
       buttonClass: 'btn-outline-warning'
     },
 
     {
       icon: 'bi-cup-hot',
       label: 'CodeChef',
-      url: 'https://www.codechef.com/users/yourusername',
+      url: 'https://www.codechef.com/users/bitwise91',
       buttonClass: 'btn-outline-success'
     },
 
     {
       icon: 'bi-bar-chart-fill',
       label: 'Codeforces',
-      url: 'https://codeforces.com/profile/yourusername',
+      url: 'https://codeforces.com/profile/Bitwise_operator',
       buttonClass: 'btn-outline-danger'
     },
 
     {
       icon: 'bi-file-earmark-person-fill',
       label: 'Resume',
-      url: '/assets/Sumit_Tiwari_Resume.pdf',
+      url: '/Sumit_Tiwari_Software_Dev_Resume _Updated.pdf',
       buttonClass: 'btn-outline-secondary'
     }
 
@@ -95,7 +95,7 @@ export const CONTACT_DATA: ContactPageData = {
 
     {
       icon: 'bi-briefcase-fill',
-      title: '1.5+ Years Experience',
+      title: '2+ Years Experience',
       description:
         'Professional experience building enterprise-grade web applications using Angular, Spring Boot, Node.js and MongoDB.'
     },
