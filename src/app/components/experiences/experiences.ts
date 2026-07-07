@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { EXPERIENCE_DATA } from './experiences.data';
 
 @Component({
   selector: 'app-experiences',
-  imports: [],
+  standalone: true,
   templateUrl: './experiences.html',
-  styleUrl: './experiences.css',
+  styleUrl: './experiences.css'
 })
 export class Experiences {
-
+  readonly data = EXPERIENCE_DATA;
 }
