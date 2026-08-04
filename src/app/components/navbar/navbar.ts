@@ -21,6 +21,7 @@ export class Navbar {
       const collapse = bootstrap.Collapse.getOrCreateInstance(this.navbarCollapse.nativeElement);
 
       collapse.hide();
+      window.scrollTo({top:0,behavior:'smooth'});
     }
   }
 }
