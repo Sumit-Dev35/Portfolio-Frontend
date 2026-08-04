@@ -156,3 +156,21 @@
     font-size: 2.5rem;
   }
 }
+
+@media(max-width:300px){
+  .availability-badge{
+    font-size:10px;
+  }
+}
+
+@media(min-width:301px) and (max-width:450px){
+  .availability-badge{
+    font-size:11px;
+  }
+}
+
+@media(min-width: 451px){
+  .availability-badge{
+    font-size:15px;
+  }
+}
