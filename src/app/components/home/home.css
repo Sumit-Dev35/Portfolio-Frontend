@@ -155,6 +155,9 @@
   .hero-title {
     font-size: 2.5rem;
   }
+  .availability-badge{
+   width:100%;
+  }
 }
 
 @media(max-width:300px){
