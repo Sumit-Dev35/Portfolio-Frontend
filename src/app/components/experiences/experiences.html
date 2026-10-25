@@ -105,21 +105,33 @@
 
     </div>
 
-    <ul class="achievement-list">
+    
+<ul class="achievement-list">
+  @for (item of experience.achievements; track $index) {
+    <li>
+      <i class="bi bi-check-circle-fill"></i>
 
-      @for(item of experience.achievements; track item){
+      <span>
+        @if (expandedItems.has($index) || item.length <= 150) {
+          {{ item }}
+        } @else {
+          {{ item | slice:0:150 }}...
+        }
 
-      <li>
+        @if (item.length > 150) {
+          <button
+            type="button"
+            class="read-more-btn"
+            (click)="toggleReadMore($index)"
+          >
+            {{ expandedItems.has($index) ? 'Read Less' : 'Read More' }}
+          </button>
+        }
+      </span>
+    </li>
+  }
+</ul>
 
-        <i class="bi bi-check-circle-fill"></i>
-
-        {{ item }}
-
-      </li>
-
-      }
-
-    </ul>
 
   </div>
 
