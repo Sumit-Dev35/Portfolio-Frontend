@@ -13,6 +13,7 @@ export class Experiences {
   readonly data = EXPERIENCE_DATA;
 
   expandedItems = new Set<number>();
+  showAllTechnologies = false;
 
   toggleReadMore(index: number): void {
     if (this.expandedItems.has(index)) {

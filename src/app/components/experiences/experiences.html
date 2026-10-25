@@ -85,19 +85,31 @@
 
     </div>
 
-    <div class="tech-stack">
-
-      @for(tech of experience.technologies; track tech){
-
+    
+<div class="tech-stack">
+  @for (
+    tech of experience.technologies;
+    track $index;
+    let i = $index
+  ) {
+    @if (i < 10 || showAllTechnologies) {
       <span class="tech-chip">
-
         {{ tech }}
-
       </span>
+    }
+  }
 
-      }
+  @if (experience.technologies.length > 10) {
+    <button
+      type="button"
+      class="read-more-btn"
+      (click)="showAllTechnologies = !showAllTechnologies"
+    >
+      {{ showAllTechnologies ? 'Read Less' : 'Read More' }}
+    </button>
+  }
+</div>
 
-    </div>
 
     <div class="section-title mt-4">
 
