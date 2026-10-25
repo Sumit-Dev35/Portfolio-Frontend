@@ -171,3 +171,24 @@
 .read-more-btn:hover {
   text-decoration: underline;
 }
+
+@media (max-width:350px) {
+  .experience-header{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .company-row h3{
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .current-badge{
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+  
+  .experience-header h5{
+    font-size: 12px;
+  }
+}
